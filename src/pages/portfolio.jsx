@@ -7,13 +7,11 @@ import '../App.css';
 const Portfolio = () => {
     const [activeTab, setActiveTab] = useState("projects");
     return (
-        <div className="portofolio" id="portofolio">
-            <Background />
-            <Navbar />
+        <div className="portofolio" id="portofolio" >
             <div className="portfolio-container">
-                <h1>My Portfolio</h1>
-                <p>You can find all of my completed projects here</p>
-                <div className="tab-card">
+                <h1 data-anim="zoom-in" >My Portfolio</h1>
+                <p data-anim="zoom-in" >You can find all of my completed projects here</p>
+                <div className="tab-card" data-anim="zoom-in">
                     <div
                         className={`tab ${activeTab === "projects" ? "active" : ""}`}
                         onClick={() => setActiveTab("projects")}

@@ -2,28 +2,19 @@ import '../App.css'
 import Background from './../components/background';
 const WelcomePage = () => (
     <div className='container'>
-        <Background />
-        <ul className="icons">
-            <li className='icon'><i class="fa-solid fa-code"></i></li>
-            <li className='icon'><i class="fa-regular fa-user"></i></li>
-            <li className='icon'><i class="fa-brands fa-github"></i></li>
+        <ul className="icons " data-anim="zoom-in" >
+            <li className='icon' ><i class="fa-solid fa-code"></i></li>
+            <li className='icon' ><i class="fa-regular fa-user"></i></li>
+            <li className='icon' ><i class="fa-brands fa-github"></i></li>
         </ul>
-        <div className="content">
-            <h1>
-                {"Welcome to my ".split('').map((char, i) => (
-                    <span
-                        key={i}
-                        className="slideIn-text"
-                        style={{ animationDelay: `${i * 0.05}s` }}
-                    >
-                        {char === ' ' ? '\u00A0' : char} { }
-                    </span>
-                ))}
+        <div className="content" data-anim="zoom-in">
+            <h1  >
+                Welcome to my
                 <br />
-                <strong id='text-no-1' className="highlight-text">Portofolio Website</strong>
+                <strong className="highlight-text" >Portofolio Website</strong>
             </h1>
 
-            <div className="link"><span className="typing-text"> www.ltd.com </span></div>
+            <div className="link" data-anim="zoom-in"><span className="typing-text" > www.ltd.com </span></div>
         </div>
     </div>
 

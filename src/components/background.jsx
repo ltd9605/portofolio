@@ -1,11 +1,10 @@
 const backgroundStyle = {
   background: `
-    radial-gradient(at 0% 0%, hsla(217, 100%, 65%, 0.25) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, hsla(200, 100%, 55%, 0.2) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, hsla(260, 80%, 65%, 0.2) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, hsla(180, 80%, 60%, 0.25) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, hsla(220, 80%, 55%, 0.08) 0px, transparent 60%),
-    linear-gradient(135deg, #0a0f18, #141c28, #1c2433)
+    radial-gradient(at 0% 0%, hsla(210, 100%, 65%, 0.45) 0px, transparent 60%),
+    radial-gradient(at 100% 0%, hsla(240, 100%, 70%, 0.45) 0px, transparent 60%),
+    radial-gradient(at 0% 100%, hsla(200, 100%, 60%, 0.4) 0px, transparent 60%),
+    radial-gradient(at 100% 100%, hsla(170, 100%, 65%, 0.45) 0px, transparent 60%),
+    linear-gradient(135deg, #05070b, #0a0f18, #0f1622)
   `,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
