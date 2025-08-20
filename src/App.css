@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
   --primary-color: linear-gradient(90deg, #007BFF, #bbcfd5);
@@ -182,8 +183,11 @@ nav {
 }
 
 .nav-logo {
-  height: 50px;
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  height: 100%;
   display: flex;
+  align-items: center;
 }
 
 .nav-logo img {
@@ -191,15 +195,18 @@ nav {
 }
 
 .nav-list ul {
-  text-decoration: none;
   display: flex;
   list-style: none;
   margin-left: 20px;
   gap: 20px
 }
 
+.nav-list a {
+  text-decoration: none;
+}
+
 .home-container {
-  padding: 8px 144px;
+  padding: 8px 240px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -396,7 +403,7 @@ nav {
 }
 
 .about-container {
-  padding: 64px 144px;
+  padding: 64px 240px;
   align-items: center;
   justify-content: space-around;
   height: calc(100vh);
@@ -536,4 +543,238 @@ nav {
   background-position: bottom;
   box-shadow: 0px 0px 8px lightblue;
   scale: 1.05;
+}
+
+.portfolio-container {
+  padding: 64px 240px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.portfolio-container>h1,
+p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tab-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 6px 8px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 6px lightblue;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.tab {
+  width: calc(100% / 3 - 10px);
+  background: linear-gradient(to top, #140e32 50%, #0006384f 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  text-align: center;
+  align-content: center;
+  border-radius: 8px;
+  height: 64px;
+  box-shadow: 0px 0px 1px lightblue;
+  transition: background-position 0.2s ease, box-shadow 0.3s ease;
+}
+
+.tab:hover {
+  cursor: pointer;
+  background-position: bottom;
+  box-shadow: 0px 0px 2px lightblue;
+  scale: 1.05;
+}
+
+.card-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card-item {
+  width: calc(100% / 3 - 40px);
+  background: linear-gradient(to top, #140e32 50%, #0006384f 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  border-radius: 12px;
+  box-shadow: 0px 0px 2px lightblue;
+  padding: 12px 24px;
+  box-sizing: border-box;
+}
+
+
+.card-item img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.card-item h3 {
+  font-size: 1.5rem;
+  margin: 8px 0px;
+}
+
+.card-item p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  text-align: start;
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-item-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.card-item-links a {
+  position: relative;
+  top: 4px;
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #393e4350, #0057b31f);
+  transition: background-color 0.3s ease;
+}
+
+.card-item-links>:nth-child(1) {
+  text-decoration: none;
+  color: #008cff;
+  padding: 6px 10px;
+}
+
+.card-item-links>:nth-child(1) i {
+  color: #008cff;
+}
+
+.contact {
+  padding: 64px 144px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.mess-form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 24px;
+  background-image: linear-gradient(to right, #393e4350, #0057b31f);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 4px black;
+}
+
+.mess-form h2 {
+  font-size: 1.5rem;
+  color: #0073ff;
+}
+
+.mess-form p {
+  font-size: 0.9rem;
+  color: #a1a1a1;
+  text-align: left;
+}
+
+.mess-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.mess-form input,
+.mess-form textarea {
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: #f0f0f02e;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.mess-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.mess-form button {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #45179b;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+}
+
+.parent>button {
+  height: 100%;
+  background-color: #9d9d9d1a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.div2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.div3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.div4 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.div5 {
+  grid-area: 3 / 2 / 4 / 3;
 }
