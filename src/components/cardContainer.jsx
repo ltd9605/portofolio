@@ -1,4 +1,6 @@
 import projects from "./projects";
+import React from 'react';
+import techImg from "./techPath-img";
 import '../App.css';
 const CardContainer = ({ activeTab }) => {
     return (
@@ -33,10 +35,11 @@ const CardContainer = ({ activeTab }) => {
             )}
 
             {activeTab === "techskills" && (
-                <div className="card-item">
-                    <h3>Tech Skills</h3>
-                    <p>HTML, CSS, JavaScript, React, PHP, MySQL, etc.</p>
-                </div>
+                techImg.map((tech) => (
+                    <div className="card-item tech-item" key={tech.id}>
+                        <img src={tech.img} alt={tech.title} />
+                    </div>
+                ))
             )}
         </div>
     );

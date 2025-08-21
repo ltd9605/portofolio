@@ -1,4 +1,4 @@
-const comments = [
+let comments = [
     {
         name: "Sivester",
         message: "This project looks amazing! Keep up the great work."

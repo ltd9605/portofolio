@@ -506,6 +506,10 @@ p {
   box-sizing: border-box;
 }
 
+.tech-item {
+  width: calc(100% / 5 - 40px) !important;
+}
+
 .card-item img {
   width: 100%;
   border-radius: 4px;

@@ -1,4 +1,4 @@
-const projects = [
+let projects = [
     {
         id: 1,
         title: "Online Book Shop",
