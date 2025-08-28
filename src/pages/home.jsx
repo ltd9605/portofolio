@@ -11,9 +11,9 @@ const HomePage = () => (
                 <p data-anim="slide-left" data-anim-delay="0.4s" >Personal portfolio a place where I showcase my projects, skills, and personal growth journey in the field of Software Engineering.   </p>
                 <ul className="skills" data-anim="slide-left" data-anim-delay="0.5s">
                     <li className="skill">React</li>
+                    <li className="skill">Node.js</li>
                     <li className="skill">Javascript</li>
-                    <li className="skill">Node.Js</li>
-                    <li className="skill">Express</li>
+                    <li className="skill">Html/CSS</li>
                 </ul>
                 <a href='#portofolio' data-anim="slide-right" data-anim-delay="0.1s" className='h-btn'>Project <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                 <a href='#contact' data-anim="slide-right" data-anim-delay="0.1s" className='h-btn'>Contact <i className="fa-solid fa-envelope"></i></a>

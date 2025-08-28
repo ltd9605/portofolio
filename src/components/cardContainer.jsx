@@ -1,13 +1,15 @@
 import projects from "./projects";
-import React from 'react';
+import React from "react";
 import techImg from "./techPath-img";
-import '../App.css';
+import { Link } from "react-router-dom"; // nhớ import Link
+import "../App.css";
+
 const CardContainer = ({ activeTab }) => {
     return (
-        <div className="card-container" >
-            {activeTab === "projects" &&
+        <div className="card-container">
+            {activeTab === "projects" && (
                 projects.map((project) => (
-                    <div className="card-item" key={project.id} >
+                    <div className="card-item" key={project.id}>
                         <img src={project.img} alt={project.title} />
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
@@ -17,15 +19,17 @@ const CardContainer = ({ activeTab }) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Github <i class="fa-solid fa-link"></i>
+                                Github <i className="fa-solid fa-link"></i>
                             </a>
-                            <a
-                            >
-                                Details <i class="fa-solid fa-arrow-right"></i>
-                            </a>
+
+                            {/* Dùng Link để điều hướng sang trang detail */}
+                            <Link to={`/portfolio/${project.id}`}>
+                                Details <i className="fa-solid fa-arrow-right"></i>
+                            </Link>
                         </div>
                     </div>
-                ))}
+                ))
+            )}
 
             {activeTab === "certificates" && (
                 <div className="card-item">

@@ -47,6 +47,10 @@
   box-shadow: 0px 0px 10px lightblue;
 }
 
+.list a.active {
+  color: #8c84ff;
+  border-bottom: 2px solid #7468ff;
+}
 
 .content {
   margin-top: 20px;
@@ -109,7 +113,9 @@
 }
 
 .home {
+  padding-top: 74px;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 nav {
@@ -158,6 +164,7 @@ nav {
   justify-content: space-around;
   width: 100%;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 .home-content {
@@ -326,6 +333,7 @@ nav {
   justify-content: space-around;
   width: 100%;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 .ab-header {
@@ -444,6 +452,7 @@ nav {
   justify-content: space-around;
   width: 100%;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 .portfolio-container>h1,
@@ -790,6 +799,10 @@ textarea::placeholder {
   font-size: 0.8rem;
   color: #a1a1a1;
   text-align: left;
+}
+
+.detail-container {
+  background-color: #000000;
 }
 
 /* ---------------- Hiệu ứng Scroll ---------------- */
