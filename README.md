@@ -1,12 +1,26 @@
-# React + Vite
+🌟 Portfolio Website - Lê Tiến Đức
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Đây là portfolio cá nhân của tôi – nơi tôi giới thiệu bản thân, kỹ năng, và những dự án đã thực hiện.
+Trang web được xây dựng theo phong cách one-page với giao diện hiện đại, tối giản và dễ sử dụng.
 
-Currently, two official plugins are available:
+🛠️ Công nghệ sử dụng
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Frontend: React.js, HTML5, CSS3
 
-## Expanding the ESLint configuration
+Styling: CSS3 + Animation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Icons: FontAwesome
+
+
+📂 Các phần chính
+
+🏠 Home – Giới thiệu ngắn gọn và highlight cá nhân
+
+👨‍💻 About – Thông tin cá nhân, kỹ năng, kinh nghiệm
+
+📁 Portfolio – Showcase các dự án kèm link GitHub & Demo
+
+📞 Contact – Form liên hệ và thông tin cá nhân
+
+🎨 Screenshot
+<img width="1158" height="865" alt="portofolio" src="https://github.com/user-attachments/assets/17a1bb44-ecda-440a-ae21-223597887852" />
