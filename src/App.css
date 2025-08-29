@@ -15,7 +15,7 @@
 * {
   padding: 0;
   margin: 0;
-  color: #fff;
+  color: #94a3b8;
   font-family: "Inter", sans-serif;
 }
 
@@ -174,6 +174,10 @@ nav {
   overflow: hidden;
 }
 
+.home-content p {
+  text-align: left;
+}
+
 .home-icon {
   width: 50%;
   box-sizing: border-box;
@@ -230,9 +234,8 @@ nav {
   color: #fff;
   margin-bottom: 8px;
   border-radius: 24px;
-  padding: 4px 8px;
-  border: solid 2px #00458e;
-  box-shadow: 0px 2px 10px rgb(118, 35, 213);
+  padding: 6px 12px;
+  box-shadow: 0px 2px 8px rgb(178, 122, 241);
 }
 
 .home-content h1 {
@@ -272,7 +275,7 @@ nav {
 .skills li {
   background: transparent;
   border-radius: 24px;
-  border: solid 2px #00458e;
+  border: solid 1px #00458e;
   padding: 4px 8px;
   display: flex;
   list-style: none;
@@ -283,7 +286,7 @@ nav {
 
 .h-btn {
   text-decoration: none;
-  border-radius: 24px;
+  border-radius: 6px;
   box-shadow: 0px 0px 6px lightblue;
   padding: 6px 24px;
   margin-right: 24px;
@@ -371,7 +374,7 @@ nav {
 
 .ab-btn {
   text-decoration: none;
-  border-radius: 24px;
+  border-radius: 6px;
   box-shadow: 0px 0px 6px lightblue;
   padding: 6px 24px;
   margin-right: 24px;
@@ -516,12 +519,25 @@ p {
 }
 
 .tech-item {
-  width: calc(100% / 5 - 40px) !important;
+  width: calc(100% / 5 - 40px);
+  background: linear-gradient(to top, #140e32 50%, #0006384f 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  border-radius: 12px;
+  box-shadow: 0px 0px 2px lightblue;
+  padding: 12px 24px;
+  box-sizing: border-box;
+}
+
+.tech-item img {
+  width: 100%;
+  border-radius: 4px;
 }
 
 .card-item img {
   width: 100%;
   border-radius: 4px;
+  height: 194px;
 }
 
 .card-item h3 {
@@ -653,7 +669,7 @@ textarea::placeholder {
   padding: 10px;
   border-radius: 4px;
   border: none;
-  background-color: #45179b;
+  background-color: #7b3cf0;
   color: #fff;
   cursor: pointer;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
@@ -673,7 +689,6 @@ textarea::placeholder {
   box-shadow: 0px -1px 1px rgb(102, 102, 102);
   border-radius: 4px;
   padding: 8px;
-  background: linear-gradient(to right bottom, #140e32 96%, #0006384f 4%);
 }
 
 .parent>a {
@@ -801,20 +816,134 @@ textarea::placeholder {
   text-align: left;
 }
 
+
 .detail-container {
+  padding: 74px 256px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 100vh;
+}
+
+.detail-content {
+  display: flex;
+  height: 100%;
+  padding: 0px 56px;
+}
+
+.back-btn {
+  border: solid 1px #fff;
+  padding: 4px 14px 4px 10px;
+  margin-right: 24px;
+  border-radius: 4px;
+  text-decoration: none;
   background-color: #000000;
 }
 
-/* ---------------- Hiệu ứng Scroll ---------------- */
-/* Fade in mạnh */
+.project-infor {
+  width: 50%;
+  padding: 36px 36px;
+  height: 100%;
+}
+
+.project-infor h1 {
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: #94a3b8;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-infor p {
+  margin: 32px 0px;
+  word-spacing: 6px;
+  text-align: left;
+  height: 74px;
+}
+
+.project-infor a {
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 1px solid rgba(0, 200, 220, 0.4);
+  border-radius: 12px;
+  margin-right: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 200, 220, 0.8);
+  background: rgba(0, 200, 220, 0.08);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 200, 220, 0.2);
+}
+
+.project-infor a:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 14px rgb(255, 255, 255);
+  background-position: left bottom;
+}
+
+.project-infor h4 {
+  margin-top: 64px;
+}
+
+.project-infor ul {
+  display: flex;
+  gap: 32px;
+  padding: 24px 12px;
+}
+
+.project-infor li {
+  list-style: none;
+  border-radius: 24px;
+  padding: 6px 12px;
+  box-shadow: 0px 0px 4px #fff;
+  background: rgba(0, 202, 220, 0.199);
+
+}
+
+.detail-project-img {
+  width: 40%;
+  border-radius: 6px;
+
+}
+
+.detail-project-img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.key-features {
+  padding: 16px;
+  box-shadow: 0px 0px 6px #fff;
+  margin-top: 16px;
+  border-radius: 4px;
+}
+
+.key-features h3 {
+  margin-bottom: 24px;
+
+}
+
+.key-features ul {
+  padding: 16px;
+  line-height: 24px;
+}
+
+/* ---------------- Hiệu ứng Scroll mượt ---------------- */
+
+/* Fade in mượt */
 .fade-in {
-  animation: fadeIn 1.2s ease-in-out forwards;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(60px);
   }
 
   to {
@@ -823,15 +952,15 @@ textarea::placeholder {
   }
 }
 
-/* Slide từ trái */
+/* Slide từ trái mượt */
 .slide-left {
-  animation: slideLeft 1.2s ease-in-out forwards;
+  animation: slideLeft 1.5s ease-out forwards;
 }
 
 @keyframes slideLeft {
   from {
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-80px);
   }
 
   to {
@@ -840,15 +969,15 @@ textarea::placeholder {
   }
 }
 
-/* Slide từ phải */
+/* Slide từ phải mượt */
 .slide-right {
-  animation: slideRight 1.2s ease-in-out forwards;
+  animation: slideRight 1.5s ease-out forwards;
 }
 
 @keyframes slideRight {
   from {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(80px);
   }
 
   to {
@@ -857,15 +986,15 @@ textarea::placeholder {
   }
 }
 
-/* Slide từ dưới lên */
+/* Slide từ dưới lên mượt */
 .slide-up {
-  animation: slideUp 2s ease-in-out forwards;
+  animation: slideUp 1.5s ease-out forwards;
 }
 
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(80px);
   }
 
   to {
@@ -874,14 +1003,15 @@ textarea::placeholder {
   }
 }
 
+/* Slide từ trên xuống mượt */
 .slide-down {
-  animation: slideDown 1.2s ease-in-out forwards;
+  animation: slideDown 1.5s ease-out forwards;
 }
 
 @keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(-200px);
+    transform: translateY(-80px);
   }
 
   to {
@@ -890,15 +1020,15 @@ textarea::placeholder {
   }
 }
 
-/* Zoom In mạnh */
+/* Zoom In mượt */
 .zoom-in {
-  animation: zoomIn 1.2s ease-in-out forwards;
+  animation: zoomIn 1.5s ease-out forwards;
 }
 
 @keyframes zoomIn {
   from {
     opacity: 0;
-    transform: scale(0.3);
+    transform: scale(0.8);
   }
 
   to {
@@ -907,9 +1037,9 @@ textarea::placeholder {
   }
 }
 
-/* Zoom Out mạnh */
+/* Zoom Out mượt */
 .zoom-out {
-  animation: zoomOut 1.2s ease-in-out forwards;
+  animation: zoomOut 1.5s ease-out forwards;
 }
 
 @keyframes zoomOut {
@@ -920,8 +1050,6 @@ textarea::placeholder {
 
   to {
     opacity: 0;
-    transform: scale(0.3);
+    transform: scale(0.8);
   }
 }
-
-/* ------------------------------------------------- */

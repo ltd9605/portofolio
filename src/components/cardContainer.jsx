@@ -1,12 +1,12 @@
 import projects from "./projects";
 import React from "react";
 import techImg from "./techPath-img";
-import { Link } from "react-router-dom"; // nhớ import Link
+import { Link } from "react-router-dom";
 import "../App.css";
 
 const CardContainer = ({ activeTab }) => {
     return (
-        <div className="card-container">
+        <div className="card-container" data-anim="zoom-in"  >
             {activeTab === "projects" && (
                 projects.map((project) => (
                     <div className="card-item" key={project.id}>
@@ -21,8 +21,6 @@ const CardContainer = ({ activeTab }) => {
                             >
                                 Github <i className="fa-solid fa-link"></i>
                             </a>
-
-                            {/* Dùng Link để điều hướng sang trang detail */}
                             <Link to={`/portfolio/${project.id}`}>
                                 Details <i className="fa-solid fa-arrow-right"></i>
                             </Link>
@@ -40,7 +38,7 @@ const CardContainer = ({ activeTab }) => {
 
             {activeTab === "techskills" && (
                 techImg.map((tech) => (
-                    <div className="card-item tech-item" key={tech.id}>
+                    <div className="tech-item" key={tech.id}>
                         <img src={tech.img} alt={tech.title} />
                     </div>
                 ))

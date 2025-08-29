@@ -6,7 +6,7 @@ const HomePage = () => (
         <div className="home-container">
             <div className="home-content" >
                 <span data-anim="zoom-in" data-anim-delay="0.2s" > <i className="fa-solid fa-graduation-cap"></i> IT student </span>
-                <h1 data-anim="slide-left" data-anim-delay="0.1s"> Frontend<br /><p className='highlight-text'>Developer</p></h1>
+                <h1 data-anim="slide-left" data-anim-delay="0.1s"> <i class="fa-solid fa-wand-magic-sparkles"></i> Frontend<br /><p className='highlight-text'>Developer</p></h1>
                 <h4 className='h-typing-text'>A portofolio website coding by react + vite app</h4>
                 <p data-anim="slide-left" data-anim-delay="0.4s" >Personal portfolio a place where I showcase my projects, skills, and personal growth journey in the field of Software Engineering.   </p>
                 <ul className="skills" data-anim="slide-left" data-anim-delay="0.5s">

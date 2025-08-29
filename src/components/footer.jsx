@@ -6,7 +6,6 @@ const Footer = () => (
         color: "#fff",
         padding: "24px 0",
         textAlign: "center",
-        marginTop: "80px"
     }}>
         <div>
             <p>&copy; {new Date().getFullYear()} Le Tien Duc. All rights reserved.</p>

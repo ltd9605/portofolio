@@ -19,12 +19,12 @@ function App() {
     <BrowserRouter>
       <Background />
       <Navbar />
-
       <Routes>
         <Route
           path="/"
           element={
             <>
+
               <WelcomePage />
               <HomePage />
               <AboutPage />

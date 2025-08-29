@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import '../App.css';
+import { useState } from "react";
+import "../App.css";
 
 const Navbar = () => {
     const [active, setActive] = useState("home");

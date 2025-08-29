@@ -11,64 +11,44 @@ export default function ProjectDetail() {
 
     return (
         <>
-            <Background />
-            <div className="p-6 border rounded bg-gray-50">
-                <h2 className="text-2xl font-bold">{project.title}</h2>
-                <p className="mt-2">{project.description}</p>
-
-                {/* Hiển thị ảnh */}
-                <img
-                    src={project.img}
-                    alt={project.title}
-                    className="mt-4 max-w-md rounded shadow"
-                />
-
-                {/* Tech stack */}
-                <div className="mt-4">
-                    <h3 className="font-semibold">Technologies:</h3>
-                    <ul className="flex gap-2 flex-wrap mt-1">
-                        {project.tech.map((t, index) => (
-                            <li
-                                key={index}
-                                className="px-2 py-1 bg-gray-200 rounded text-sm"
-                            >
-                                {t}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-
-                {/* Links */}
-                <div className="mt-4 flex gap-3">
-                    {project.links.github && (
-                        <a
-                            href={project.links.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-3 py-1 bg-gray-800 text-white rounded"
-                        >
-                            🔗 Github
-                        </a>
-                    )}
-                    {project.links.demo && (
-                        <a
-                            href={project.links.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-3 py-1 bg-green-600 text-white rounded"
-                        >
-                            🚀 Demo
-                        </a>
-                    )}
-                </div>
+            <div className="detail-container">
                 <HashLink
                     smooth
                     to="/#portofolio"
-                    className="mt-4 inline-block px-3 py-1 bg-blue-500 text-white rounded"
+                    className="back-btn"
                 >
                     ⬅ Back
                 </HashLink>
-            </div>
+                <span className="hover:text-blue-400 cursor-pointer">Projects</span> &gt;
+                <span className="text-white ml-1"> {project.title}</span>
+                <div className="detail-content">
+                    <div className="project-infor">
+                        <h1 >{project.title}</h1>
+                        <p >{project.description}</p>
+                        <a> <i class="fa-solid fa-display"></i>  Live Demo</a>
+                        <a href={project.links.github} target="_blank"> <i class="fa-brands fa-github"></i>  Github</a>
+                        <h4><i class="fa-solid fa-code"></i> Technologies Used</h4>
+                        <ul>
+                            {project.tech.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+
+                    </div>
+                    <div className="detail-project-img">
+                        <img src={project.img}
+                            alt={project.title} />
+                        <div className="key-features">
+                            <h3> <i class="fa-regular fa-star">  </i>  Key features </h3>
+                            <ul>
+                                {project.keyFeatures.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div >
         </>
     );
 }

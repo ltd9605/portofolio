@@ -15,15 +15,13 @@ const AboutPage = () => (
                     <p>I’m a Software Engineering student passionate about creating efficient and user-friendly applications, while constantly learning and improving my skills.
                     </p>
                     <button
-                        onClick={() => window.location.href = '/Le-Tien-Duc-ITsupportCV.pdf'}
+                        onClick={() => window.open('/Le-Tien-Duc-ITsupportCV.pdf', '_blank')}
                         className="ab-btn"
                         data-anim="slide-left"
                         data-anim-delay="0.2s"
                     >
                         <i className="fa-solid fa-file-circle-check"></i> Download CV
                     </button>
-
-                    <button className="ab-btn" data-anim="slide-left"  ><i class="fa-solid fa-terminal"></i> View my project</button>
                 </div>
                 <div className="ab-img" data-anim="slide-right" data-delay="0.2s">
                     <img src="../public/avatar-icon.gif" alt="" />

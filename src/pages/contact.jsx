@@ -88,7 +88,6 @@ const Contact = () => {
                                 <i className="fa-solid fa-square-arrow-up-right"></i> Send Message
                             </button>
                         </form>
-
                         <h2>Connect with me</h2>
                         <div className="parent" data-anim="slide-right" data-anim-delay="0.1s">
                             <a className="div1"><i className="fa-brands fa-facebook"></i> Facebook <br /><span>Lê Tiến Đức</span></a>

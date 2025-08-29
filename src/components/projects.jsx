@@ -4,7 +4,13 @@ let projects = [
         title: "Online Book Shop",
         img: "../src/assets/img/projects-img/project.gif",
         description:
-            "Web app built with HTML, CSS, PHP, MySQL I contributed as a team member on UI and book management features.",
+            "An e-commerce platform for buying and selling books, built using HTML, CSS, PHP, and MySQL. The main objective was to create a digital bookstore with an easy-to-use interface and secure transaction flow.",
+        keyFeatures: [
+            "User registration and login system",
+            "Browse and search books",
+            "Shopping cart and checkout",
+            "Admin panel for managing books and categories"
+        ],
         links: {
             github: "https://github.com/ltd9605/online-bookshop"
         },
@@ -15,7 +21,13 @@ let projects = [
         title: "Livestra Comics",
         img: "../src/assets/img/projects-img/livestracomics.png",
         description:
-            "Online comic reading website built with React + Vite, using available APIs; I was the project owner, responsible for development and deployment.",
+            "A modern comic reading website developed with React and Vite. The platform integrates external APIs to fetch thousands of comics in real time.",
+        keyFeatures: [
+            "Explore comics by genre and popularity",
+            "Search and filter functionality",
+            "Online reading with chapter navigation",
+            "Responsive design for mobile and desktop"
+        ],
         links: {
             github: "https://github.com/ltd9605/livestra-comics"
         },
@@ -26,7 +38,13 @@ let projects = [
         title: "Personal Website",
         img: "../src/assets/img/projects-img/project.gif",
         description:
-            "A personal website built with HTML, CSS, and JavaScript to showcase my skills and projects.",
+            "A static portfolio website developed with HTML, CSS, and JavaScript, aimed at presenting myself professionally online.",
+        keyFeatures: [
+            "About Me and Skills sections",
+            "Project showcase with descriptions and links",
+            "Responsive navigation bar and layout",
+            "Contact form with client-side validation"
+        ],
         links: {
             github: "https://github.com/ltd9605/ltd9605.github.io"
         },
@@ -37,7 +55,13 @@ let projects = [
         title: "React Portfolio",
         img: "../src/assets/img/projects-img/portofolio.png",
         description:
-            "Another Personal Portfolio – Built with React + Vite to introduce myself and showcase my skills and projects.",
+            "A more advanced and dynamic portfolio website built with React and Vite, designed as an upgrade from my earlier static portfolio.",
+        keyFeatures: [
+            "Modern UI with animations and transitions",
+            "Project showcase with dynamic rendering",
+            "Routing between sections using React Router",
+            "Fully responsive design optimized for all screen sizes"
+        ],
         links: {
             demo: "https://your-demo-link.com",
             github: "https://github.com/ltd9605/portofolio"
@@ -45,4 +69,5 @@ let projects = [
         tech: ["React", "Vite", "CSS", "HTML", "JavaScript"]
     }
 ];
+
 export default projects;
