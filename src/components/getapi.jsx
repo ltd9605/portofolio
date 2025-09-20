@@ -1,21 +1,17 @@
 import { createClient } from "@supabase/supabase-js";
-const supabaseUrl = import.meta.env.SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.SUPABASE_KEY;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_KEY;
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-export async function getComments() {
-    const { data, error } = await supabase.from("comments").select("*");
-    if (error) throw error;
-    return data;
-}
+
 export async function getProjects() {
     const { data, error } = await supabase
         .from("projects")
         .select(`
-      id, title, img, description, github_link, demo_link,slug,
-      key_features (id, feature),
-      project_techs (
+        id, title, img, description, github_link, demo_link,slug,
+        key_features (id, feature),
+        project_techs (
         techs (id, title, img)
-      )
+        )
     `);
     if (error) throw error;
     return data.map((p) => ({
@@ -40,4 +36,9 @@ export async function getTechs() {
         title: t.title,
         img: t.img,
     }));
+}
+export async function getComments() {
+    const { data, error } = await supabase.from("comments").select("*");
+    if (error) throw error;
+    return data;
 }

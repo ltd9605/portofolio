@@ -27,6 +27,27 @@
   height: 100vh;
 }
 
+.welcome-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: radial-gradient(at 0% 0%, hsla(210, 100%, 40%, 0.25) 0px, transparent 60%),
+    radial-gradient(at 100% 0%, hsla(240, 100%, 35%, 0.25) 0px, transparent 60%),
+    radial-gradient(at 0% 100%, hsla(200, 100%, 30%, 0.2) 0px, transparent 60%),
+    radial-gradient(at 100% 100%, hsla(170, 100%, 35%, 0.25) 0px, transparent 60%),
+    linear-gradient(135deg, #020305, #06080d, #0a0f14);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.zoom-out {
+  animation: zoomOut 0.4s ease-out forwards;
+}
+
 .icons {
   display: flex;
   justify-content: center;
@@ -130,7 +151,7 @@ nav {
   justify-content: space-between;
   padding: 4px 168px;
   box-sizing: border-box;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .nav-logo {
@@ -919,6 +940,11 @@ textarea::placeholder {
   line-height: 24px;
 }
 
+.no_cmt {
+  margin-top: 50px;
+  color: #94a3b8;
+}
+
 /* ---------------- Hiệu ứng Scroll mượt ---------------- */
 
 /* Fade in mượt */
@@ -1023,10 +1049,6 @@ textarea::placeholder {
   }
 }
 
-/* Zoom Out mượt */
-.zoom-out {
-  animation: zoomOut 1.5s ease-out forwards;
-}
 
 @keyframes zoomOut {
   from {

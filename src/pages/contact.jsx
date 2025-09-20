@@ -1,31 +1,33 @@
-import '../App.css';
-import { getComments } from '../components/getapi';
-import { useState, useEffect } from 'react';
+import "../App.css";
+import { useState, useEffect } from "react";
+import { getComments, supabase } from "../components/getapi";
 
 const Contact = () => {
-    // state cho comments
+    // --- State cho message ---
+    const [msgName, setMsgName] = useState("");
+    const [msgEmail, setMsgEmail] = useState("");
+    const [msgContent, setMsgContent] = useState("");
+
+    // --- State cho comments ---
     const [commentList, setCommentList] = useState([]);
     const [cmtName, setCmtName] = useState("");
     const [cmtMessage, setCmtMessage] = useState("");
 
-    // state cho message form
-    const [msgName, setMsgName] = useState("");
-    const [msgEmail, setMsgEmail] = useState("");
-    const [msgContent, setMsgContent] = useState("");
+    // --- Load comments ban đầu ---
     useEffect(() => {
-        const fetchComments = async () => {
-            try {
-                const data = await getComments();
-                setCommentList(data);
-            } catch (error) {
-                console.error(error);
-            }
-        };
         fetchComments();
     }, []);
 
+    const fetchComments = async () => {
+        try {
+            const data = await getComments();
+            setCommentList(data);
+        } catch (err) {
+            console.error("❌ Lỗi khi load comments:", err.message);
+        }
+    };
 
-    // ✅ Hàm xử lý gửi "Message" (dùng mailto)
+    // --- Xử lý gửi message qua mailto ---
     const handleMessage = (e) => {
         e.preventDefault();
         if (!msgName.trim() || !msgEmail.trim() || !msgContent.trim()) return;
@@ -37,11 +39,43 @@ const Contact = () => {
 
         window.location.href = `mailto:ltd9605@gmail.com?subject=${subject}&body=${body}`;
 
-        // reset input
         setMsgName("");
         setMsgEmail("");
         setMsgContent("");
     };
+
+    // --- Xử lý post comment ---
+    const handlePostComment = async (e) => {
+        e.preventDefault();
+        if (!cmtName.trim() || !cmtMessage.trim()) return;
+
+        const newComment = {
+            name: cmtName,
+            message: cmtMessage,
+        };
+
+        try {
+            const { data, error } = await supabase
+                .from("comments")
+                .insert([newComment])
+                .select();
+
+            if (error) throw error;
+
+            // Cập nhật UI ngay
+            setCommentList((prev) => [...prev, data[0]]);
+
+            // Reset form
+            setCmtName("");
+            setCmtMessage("");
+
+            // Đồng bộ lại DB trong background
+            fetchComments();
+        } catch (err) {
+            console.error("❌ Lỗi khi post comment:", err.message);
+        }
+    };
+
     return (
         <div className="contact" id="contact">
             <div className="contact-container">
@@ -50,17 +84,13 @@ const Contact = () => {
                     Got a question? Send me a message, and I’ll respond promptly.
                 </p>
                 <div className="contact-form">
-                    {/* --- FORM SEND MESSAGE --- */}
+                    {/* --- Form gửi message --- */}
                     <div className="mess-form" data-anim="slide-left">
                         <h2>
                             Get in touch <i className="fa-solid fa-circle-nodes"></i>
                         </h2>
                         <p>Have a question? Let’s talk about it together!</p>
-                        <form
-                            onSubmit={handleMessage}
-                            data-anim="slide-left"
-                            data-anim-delay="0.1s"
-                        >
+                        <form onSubmit={handleMessage} data-anim="slide-left" data-anim-delay="0.1s">
                             <input
                                 type="text"
                                 placeholder="Your Name"
@@ -84,47 +114,43 @@ const Contact = () => {
                             ></textarea>
                             <br />
                             <button className="contact-btn" type="submit">
-                                <i className="fa-solid fa-square-arrow-up-right"></i> Send
-                                Message
+                                <i className="fa-solid fa-square-arrow-up-right"></i> Send Message
                             </button>
                         </form>
 
+                        {/* --- Social links --- */}
                         <h2>Connect with me</h2>
-                        <div
-                            className="parent"
-                            data-anim="slide-right"
-                            data-anim-delay="0.1s"
-                        >
+                        <div className="parent" data-anim="slide-right" data-anim-delay="0.1s">
                             <a className="div1">
                                 <i className="fa-brands fa-facebook"></i> Facebook <br />
                                 <span>Lê Tiến Đức</span>
                             </a>
                             <a className="div2">
-                                <i className="fa-brands fa-square-github"></i> Github <br />{" "}
+                                <i className="fa-brands fa-square-github"></i> Github <br />
                                 <span>ltd9605</span>
                             </a>
                             <a className="div3">
-                                <i className="fa-brands fa-instagram"></i> Instagram <br />{" "}
+                                <i className="fa-brands fa-instagram"></i> Instagram <br />
                                 <span>@tien_duc0906</span>
                             </a>
                             <a className="div4">
-                                <i className="fa-regular fa-envelope"></i> Gmail <br />{" "}
+                                <i className="fa-regular fa-envelope"></i> Gmail <br />
                                 <span>ltd9605@gmail.com</span>
                             </a>
                             <a className="div5">
-                                <i className="fa-brands fa-tiktok"></i> Tiktok <br />{" "}
+                                <i className="fa-brands fa-tiktok"></i> Tiktok <br />
                                 <span>tienduc_9605</span>
                             </a>
                         </div>
                     </div>
 
-                    {/* --- FORM COMMENTS --- */}
+                    {/* --- Comments --- */}
                     <div className="cmt-container" data-anim="slide-right">
                         <div className="cmt-form">
                             <h1>
                                 <i className="fa-solid fa-message"></i> Comments
                             </h1>
-                            <form data-anim="zoom-in" data-anim-delay="0.1s">
+                            <form onSubmit={handlePostComment} data-anim="zoom-in" data-anim-delay="0.1s">
                                 <label>Name *</label>
                                 <input
                                     type="text"
@@ -142,25 +168,30 @@ const Contact = () => {
                                 ></textarea>
                                 <br />
                                 <button className="contact-btn" type="submit">
-                                    <i className="fa-solid fa-square-arrow-up-right"></i> Post your
-                                    comment
+                                    <i className="fa-solid fa-square-arrow-up-right"></i> Post your comment
                                 </button>
                             </form>
                         </div>
 
-                        {/* Danh sách comment */}
-                        <div className="coments">
-                            <div className="coments">
-                                {commentList.map((comment, index) => (
+                        {/* --- Danh sách comments --- */}
+                        <div className="comments">
+                            {commentList.length === 0 ? (
+                                <p className="no_cmt">⏳ Chưa có bình luận nào</p>
+                            ) : (
+                                commentList.map((comment, index) => (
                                     <div className="cmt" key={index} data-anim="zoom-in">
                                         <h3>
-                                            <i className="fa-solid fa-message"></i> {comment.name}
+                                            <i className="fa-solid fa-user"></i> {comment.name}
                                         </h3>
                                         <p>{comment.message}</p>
+                                        {comment.created_at && (
+                                            <span>
+                                                {new Date(comment.created_at).toLocaleString()}
+                                            </span>
+                                        )}
                                     </div>
-                                ))}
-                            </div>
-
+                                ))
+                            )}
                         </div>
                     </div>
                 </div>

@@ -3,8 +3,6 @@ import "../App.css";
 
 const Navbar = () => {
     const [active, setActive] = useState("home");
-
-    // Danh sách section và id tương ứng
     const sections = ["home", "about", "portofolio", "contact"];
 
     useEffect(() => {
@@ -26,14 +24,14 @@ const Navbar = () => {
         };
 
         window.addEventListener("scroll", handleScroll);
-        handleScroll(); // call once to set active on load
+        handleScroll();
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
         <nav>
-            <div className="nav-logo">S1vester</div>
+            <div className="nav-logo">Silvester</div>
             <div className="nav-list">
                 <ul className="list">
                     {sections.map((section) => (

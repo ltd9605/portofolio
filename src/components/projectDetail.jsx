@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { getProjects } from "./getapi";
+import { getProjects, getTechs } from "./getapi";
 import { useState, useEffect } from "react";
 export default function ProjectDetail() {
     const [projects, setProjects] = useState([]);
@@ -16,10 +16,13 @@ export default function ProjectDetail() {
         fetchData();
     }, []);
     const { slug } = useParams();
+    if (!projects || projects.length === 0) {
+        return <p>⏳ Đang tải dữ liệu...</p>;
+    }
     const project = projects.find((p) => p.slug === slug);
-
-    if (!project) return <p>❌ Không tìm thấy project</p>;
-
+    if (!project) {
+        return <p>❌ Không tìm thấy project</p>;
+    }
     return (
         <>
             <div className="detail-container">
@@ -40,11 +43,14 @@ export default function ProjectDetail() {
                         <a href={project.links.github} target="_blank"> <i class="fa-brands fa-github"></i>  Github</a>
                         <h4><i class="fa-solid fa-code"></i> Technologies Used</h4>
                         <ul>
-                            {project.tech.map((item, index) => (
-                                <li key={index}>{item}</li>
-                            ))}
+                            {project.tech && project.tech.length > 0 ? (
+                                project.tech.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))
+                            ) : (
+                                <li>Chưa có dữ liệu công nghệ</li>
+                            )}
                         </ul>
-
                     </div>
                     <div className="detail-project-img">
                         <img src={project.img}

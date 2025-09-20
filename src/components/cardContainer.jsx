@@ -32,7 +32,7 @@ const CardContainer = ({ activeTab }) => {
                             >
                                 Github <i className="fa-solid fa-link"></i>
                             </a>
-                            <Link to={`/portfolio/${project.slugs}`}>
+                            <Link to={`/portfolio/${project.slug}`}>
                                 Details <i className="fa-solid fa-arrow-right"></i>
                             </Link>
                         </div>
