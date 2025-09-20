@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
-const supabaseUrl = "https://fjkxopxhkwngtwrykyhb.supabase.co";
-const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqa3hvcHhoa3duZ3R3cnlreWhiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgzMjg2NjYsImV4cCI6MjA3MzkwNDY2Nn0.pM8frhA18aT1WvD4mpiUlZBxQRLVfnrRaS6HZ-G-LSo";
+const supabaseUrl = import.meta.env.SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.SUPABASE_KEY;
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export async function getComments() {
     const { data, error } = await supabase.from("comments").select("*");
