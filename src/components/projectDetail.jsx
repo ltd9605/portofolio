@@ -1,11 +1,22 @@
 import { useParams } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import projects from "./projects";
-import Background from "./background";
-
+import { getProjects } from "./getapi";
+import { useState, useEffect } from "react";
 export default function ProjectDetail() {
-    const { id } = useParams();
-    const project = projects.find((p) => p.id === parseInt(id));
+    const [projects, setProjects] = useState([]);
+    const [techs, setTechs] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const p_data = await getProjects();
+            setProjects(p_data);
+            const t_data = await getTechs();
+            setTechs(t_data);
+        }
+        fetchData();
+    }, []);
+    const { slug } = useParams();
+    const project = projects.find((p) => p.slug === slug);
 
     if (!project) return <p>❌ Không tìm thấy project</p>;
 

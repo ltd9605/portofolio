@@ -24,7 +24,6 @@ function App() {
           path="/"
           element={
             <>
-
               <WelcomePage />
               <HomePage />
               <AboutPage />
@@ -33,9 +32,8 @@ function App() {
             </>
           }
         />
-        <Route path="/portfolio/:id" element={<ProjectDetail />} />
+        <Route path="/portfolio/:slug" element={<ProjectDetail />} />
       </Routes>
-
       <Footer />
     </BrowserRouter>
   );

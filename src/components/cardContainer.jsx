@@ -1,10 +1,21 @@
-import projects from "./projects";
-import React from "react";
-import techImg from "./techPath-img";
+import { getProjects, getTechs } from "./getapi";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 
 const CardContainer = ({ activeTab }) => {
+    const [projects, setProjects] = useState([]);
+    const [techs, setTechs] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const p_data = await getProjects();
+            setProjects(p_data);
+            const t_data = await getTechs();
+            setTechs(t_data);
+        }
+        fetchData();
+    }, []);
     return (
         <div className="card-container" data-anim="zoom-in"  >
             {activeTab === "projects" && (
@@ -21,7 +32,7 @@ const CardContainer = ({ activeTab }) => {
                             >
                                 Github <i className="fa-solid fa-link"></i>
                             </a>
-                            <Link to={`/portfolio/${project.id}`}>
+                            <Link to={`/portfolio/${project.slugs}`}>
                                 Details <i className="fa-solid fa-arrow-right"></i>
                             </Link>
                         </div>
@@ -37,7 +48,7 @@ const CardContainer = ({ activeTab }) => {
             )}
 
             {activeTab === "techskills" && (
-                techImg.map((tech) => (
+                techs.map((tech) => (
                     <div className="tech-item" key={tech.id}>
                         <img src={tech.img} alt={tech.title} />
                     </div>

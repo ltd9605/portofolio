@@ -6,9 +6,16 @@ const HomePage = () => (
         <div className="home-container">
             <div className="home-content" >
                 <span data-anim="zoom-in" data-anim-delay="0.2s" > <i className="fa-solid fa-graduation-cap"></i> IT student </span>
-                <h1 data-anim="slide-left" data-anim-delay="0.1s"> <i class="fa-solid fa-wand-magic-sparkles"></i> Frontend<br /><p className='highlight-text'>Developer</p></h1>
-                <h4 className='h-typing-text'>A portofolio website coding by react + vite app</h4>
-                <p data-anim="slide-left" data-anim-delay="0.4s" >Personal portfolio a place where I showcase my projects, skills, and personal growth journey in the field of Software Engineering.   </p>
+                <h1 data-anim="slide-left" data-anim-delay="0.1s"> <i class="fa-solid fa-wand-magic-sparkles"></i>Software<br /><p className='highlight-text'>Engineer</p></h1>
+                <h4 className='h-typing-text'>A site that reflects my passion for programming and the stories that define me ✨</h4>
+                <p data-anim="slide-left" data-anim-delay="0.4s">
+                    Welcome to my personal portfolio — a creative space where I share my projects, skills,
+                    and growth journey in Software Engineering 🚀.
+                    Beyond the code, it’s also a story of curiosity, persistence, and passion for building things
+                    that make life easier ✨.
+                    Take a look around and discover what I’ve been working on!
+                </p>
+
                 <ul className="skills" data-anim="slide-left" data-anim-delay="0.5s">
                     <li className="skill">React</li>
                     <li className="skill">Node.js</li>
