@@ -1,26 +1,27 @@
-🌟 Portfolio Website - Lê Tiến Đức
+# 🌟 Portfolio Website - Le Tien Duc
 
-🚀 Đây là portfolio cá nhân của tôi – nơi tôi giới thiệu bản thân, kỹ năng, và những dự án đã thực hiện.
-Trang web được xây dựng theo phong cách one-page với giao diện hiện đại, tối giản và dễ sử dụng.
+🚀 This is my personal portfolio website – a place to showcase myself, my skills, and the projects I have completed.  
+The website is designed as a one-page layout with a modern, minimalist, and user-friendly interface.
 
-🛠️ Công nghệ sử dụng
+---
 
-Frontend: React.js, HTML5, CSS3
+## 🛠️ Technologies Used
 
-Styling: CSS3 + Animation
+**Frontend:** React.js, HTML5, CSS3  
+**Styling:** CSS3 + Animations  
+**Icons:** FontAwesome
 
-Icons: FontAwesome
+---
 
+## 📂 Main Sections
 
-📂 Các phần chính
+- 🏠 **Home** – Brief introduction and personal highlights  
+- 👨‍💻 **About** – Personal information, skills, and experience  
+- 📁 **Portfolio** – Showcase of projects with GitHub & Demo links  
+- 📞 **Contact** – Contact form and personal information
 
-🏠 Home – Giới thiệu ngắn gọn và highlight cá nhân
+---
 
-👨‍💻 About – Thông tin cá nhân, kỹ năng, kinh nghiệm
+## 🎨 Screenshot
 
-📁 Portfolio – Showcase các dự án kèm link GitHub & Demo
-
-📞 Contact – Form liên hệ và thông tin cá nhân
-
-🎨 Screenshot
-<img width="1158" height="865" alt="portofolio" src="https://github.com/user-attachments/assets/17a1bb44-ecda-440a-ae21-223597887852" />
+![Portfolio Screenshot](https://github.com/user-attachments/assets/17a1bb44-ecda-440a-ae21-223597887852)

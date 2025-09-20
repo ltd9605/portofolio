@@ -832,7 +832,6 @@ textarea::placeholder {
   justify-content: space-around;
   width: 100%;
   box-sizing: border-box;
-  max-height: 100vh;
 }
 
 .detail-content {
@@ -943,6 +942,98 @@ textarea::placeholder {
 .no_cmt {
   margin-top: 50px;
   color: #94a3b8;
+}
+
+/* Container README */
+.project-readme {
+  background-color: #0d1117;
+  /* nền GitHub dark */
+  color: #c9d1d9;
+  /* text màu sáng */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  overflow-x: auto;
+  font-family: 'Segoe UI', 'Roboto', 'Fira Code', monospace;
+  line-height: 1.6;
+}
+
+/* Headings */
+.project-readme h1 {
+  font-size: 2rem;
+  color: #f97583;
+  margin-bottom: 1rem;
+}
+
+.project-readme h2 {
+  font-size: 1.75rem;
+  color: #f0883e;
+  margin-bottom: 0.8rem;
+}
+
+.project-readme h3 {
+  font-size: 1.5rem;
+  color: #d2a8ff;
+  margin-bottom: 0.6rem;
+}
+
+/* Paragraph */
+.project-readme p {
+  margin-bottom: 0.8rem;
+}
+
+/* Links */
+.project-readme a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.project-readme a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+.project-readme ul,
+.project-readme ol {
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Code inline */
+.project-readme code {
+  background-color: #161b22;
+  color: #f0f6fc;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Code block */
+.project-readme pre {
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.project-readme pre code {
+  color: #f0f6fc;
+}
+
+/* Blockquote */
+.project-readme blockquote {
+  border-left: 4px solid #8b949e;
+  padding-left: 1rem;
+  color: #8b949e;
+  margin: 1rem 0;
+}
+
+/* Horizontal rule */
+.project-readme hr {
+  border: 0;
+  border-top: 1px solid #30363d;
+  margin: 1.5rem 0;
 }
 
 /* ---------------- Hiệu ứng Scroll mượt ---------------- */

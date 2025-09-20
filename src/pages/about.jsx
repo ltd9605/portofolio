@@ -30,8 +30,8 @@ const AboutPage = () => {
                             and improving my skills.
                         </p>
                         <a
-                            href="/assets/Le-Tien-Duc-ITsupportCV.pdf" // đường dẫn trong public folder
-                            download="Le-Tien-Duc-CV.pdf"             // tên file khi download
+                            href="/assets/Le-Tien-Duc-ITsupportCV.pdf"
+                            download="Le-Tien-Duc-CV.pdf"
                             className="ab-btn"
                             data-anim="slide-left"
                             data-anim-delay="0.2s"
