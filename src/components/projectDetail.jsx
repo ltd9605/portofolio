@@ -3,6 +3,8 @@ import { HashLink } from "react-router-hash-link";
 import { getProjects, getTechs } from "./getapi";
 import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
 
 export default function ProjectDetail() {
     const [projects, setProjects] = useState([]);
@@ -116,14 +118,15 @@ export default function ProjectDetail() {
                 <h4>
                     <i className="fa-solid fa-book"></i> README
                 </h4>
-                {readme ? <ReactMarkdown>{readme}</ReactMarkdown> : <p>Chưa có README</p>}
+                {readme ? (
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {readme}
+                    </ReactMarkdown>
+                ) : (
+                    <p>No README available</p>
+                )}
             </div>
 
-            {/* Other Projects (placeholder) */}
-            <div className="rdm-container" data-anim="fade-in">
-                <h2>Other Projects</h2>
-                {/* Bạn có thể map các project khác ở đây */}
-            </div>
         </div>
     );
 }

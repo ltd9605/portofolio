@@ -5,7 +5,7 @@ The website is designed as a one-page layout with a modern, minimalist, and user
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠 Technologies Used
 
 **Frontend:** React.js, HTML5, CSS3  
 **Styling:** CSS3 + Animations  

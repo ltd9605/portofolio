@@ -946,11 +946,10 @@ textarea::placeholder {
 
 /* Container README */
 .project-readme {
-  background-color: #0d1117;
-  /* nền GitHub dark */
+  background-color: transparent;
   color: #c9d1d9;
-  /* text màu sáng */
   padding: 1.5rem;
+  border: solid 2px #30363d;
   border-radius: 0.5rem;
   margin-top: 2rem;
   overflow-x: auto;
@@ -958,7 +957,6 @@ textarea::placeholder {
   line-height: 1.6;
 }
 
-/* Headings */
 .project-readme h1 {
   font-size: 2rem;
   color: #f97583;
@@ -977,7 +975,6 @@ textarea::placeholder {
   margin-bottom: 0.6rem;
 }
 
-/* Paragraph */
 .project-readme p {
   margin-bottom: 0.8rem;
 }
