@@ -8,7 +8,6 @@ import remarkGfm from "remark-gfm";
 
 export default function ProjectDetail() {
     const [projects, setProjects] = useState([]);
-    const [techs, setTechs] = useState([]);
     const [readme, setReadme] = useState("");
 
     const { slug } = useParams();
@@ -18,10 +17,6 @@ export default function ProjectDetail() {
             try {
                 const p_data = await getProjects();
                 setProjects(p_data);
-
-                const t_data = await getTechs();
-                setTechs(t_data);
-
                 const currentProject = p_data.find((p) => p.slug === slug);
                 if (currentProject && currentProject.links.github) {
                     try {
@@ -58,7 +53,6 @@ export default function ProjectDetail() {
     if (!project) {
         return <p>❌ Không tìm thấy project</p>;
     }
-
     return (
         <div className="detail-container">
             <HashLink smooth to="/#portofolio" className="back-btn">
@@ -97,7 +91,7 @@ export default function ProjectDetail() {
 
                 {/* Project Image & Key Features */}
                 <div className="detail-project-img" data-anim="fade-in">
-                    <img src={project.img} alt={project.title} />
+                    <img src={`/${project.img}`} alt={project.title} />
                     <div className="key-features">
                         <h3>
                             <i className="fa-regular fa-star"></i> Key features

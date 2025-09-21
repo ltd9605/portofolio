@@ -21,7 +21,7 @@ const CardContainer = ({ activeTab }) => {
             {activeTab === "projects" && (
                 projects.map((project) => (
                     <div className="card-item" key={project.id}>
-                        <img src={project.img} alt={project.title} />
+                        <img src={`/${project.img}`} alt={project.title} />
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
                         <div className="card-item-links">

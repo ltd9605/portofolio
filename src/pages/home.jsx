@@ -31,7 +31,7 @@ const HomePage = () => (
                 </ul>
             </div>
             <div className="home-icon" data-anim="slide-right">
-                <img src="../public/icon.gif" alt="" />
+                <img src="/icon.gif" alt="" />
             </div>
         </div>
     </div>
