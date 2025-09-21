@@ -1,6 +1,6 @@
 Portfolio Website - Le Tien Duc
 
- This is my personal portfolio website – a place to showcase myself, my skills, and the projects I have completed.  
+ This is my personal portfolio website  a place to showcase myself, my skills, and the projects I have completed.  
 The website is designed as a one-page layout with a modern, minimalist, and user-friendly interface.
 
 ---

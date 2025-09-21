@@ -121,15 +121,18 @@ const Contact = () => {
                         {/* --- Social links --- */}
                         <h2>Connect with me</h2>
                         <div className="parent" data-anim="slide-right" data-anim-delay="0.1s">
-                            <a className="div1">
+                            <a className="div1"
+                                href="https://www.facebook.com/le.tien.duc.9605 " target="_blank" rel="noopener noreferrer">
                                 <i className="fa-brands fa-facebook"></i> Facebook <br />
                                 <span>Lê Tiến Đức</span>
                             </a>
-                            <a className="div2">
+                            <a className="div2"
+                                href="https://github.com/ltd9605" target="_blank" rel="noopener noreferrer">
                                 <i className="fa-brands fa-square-github"></i> Github <br />
                                 <span>ltd9605</span>
                             </a>
-                            <a className="div3">
+                            <a className="div3"
+                                href="https://www.instagram.com/tien_duc0906/" target="_blank" rel="noopener noreferrer">
                                 <i className="fa-brands fa-instagram"></i> Instagram <br />
                                 <span>@tien_duc0906</span>
                             </a>
@@ -137,7 +140,8 @@ const Contact = () => {
                                 <i className="fa-regular fa-envelope"></i> Gmail <br />
                                 <span>ltd9605@gmail.com</span>
                             </a>
-                            <a className="div5">
+                            <a className="div5"
+                                href="https://www.tiktok.com/@tienduc_9605" target="_blank" rel="noopener noreferrer">
                                 <i className="fa-brands fa-tiktok"></i> Tiktok <br />
                                 <span>tienduc_9605</span>
                             </a>

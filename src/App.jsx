@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import './App.css';
 
 import HomePage from './pages/home';
@@ -12,6 +12,21 @@ import Navbar from './components/navbar';
 import ProjectDetail from './components/projectDetail';
 import useAnimation from './components/Animation';
 import { useState, useEffect } from "react";
+
+// Tạo một component wrapper để dùng useLocation
+function Layout({ children }) {
+  const location = useLocation();
+
+  // Nếu URL bắt đầu bằng /portfolio/ thì không hiển thị Navbar
+  const showNavbar = !location.pathname.startsWith("/portfolio/");
+
+  return (
+    <>
+      {showNavbar && <Navbar />}
+      {children}
+    </>
+  );
+}
 
 function App() {
   useAnimation();
@@ -32,7 +47,6 @@ function App() {
   return (
     <BrowserRouter>
       <Background />
-      <Navbar />
 
       {/* Overlay WelcomePage */}
       {showWelcome && (
@@ -41,21 +55,22 @@ function App() {
         </div>
       )}
 
-      {/* Routes chính */}
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <HomePage />
-              <AboutPage />
-              <Portfolio />
-              <Contact />
-            </>
-          }
-        />
-        <Route path="/portfolio/:slug" element={<ProjectDetail />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <HomePage />
+                <AboutPage />
+                <Portfolio />
+                <Contact />
+              </>
+            }
+          />
+          <Route path="/portfolio/:slug" element={<ProjectDetail />} />
+        </Routes>
+      </Layout>
 
       <Footer />
     </BrowserRouter>
