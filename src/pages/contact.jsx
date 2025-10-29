@@ -136,7 +136,8 @@ const Contact = () => {
                                 <i className="fa-brands fa-instagram"></i> Instagram <br />
                                 <span>@tien_duc0906</span>
                             </a>
-                            <a className="div4">
+                            <a className="div4"
+                                href="https://mail.google.com">
                                 <i className="fa-regular fa-envelope"></i> Gmail <br />
                                 <span>ltd9605@gmail.com</span>
                             </a>
