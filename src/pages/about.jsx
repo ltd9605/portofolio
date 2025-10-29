@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import '../App.css';
-import { getProjects } from "../components/getapi";
+import { getCertificate, getProjects } from "../components/getapi";
 const AboutPage = () => {
     const [projects, setProjects] = useState([]);
-
+    const [certificates, setCertificates] = useState([]);
     useEffect(() => {
         async function fetchData() {
             const data = await getProjects();
             setProjects(data);
+            const cer = await getCertificate();
+            setCertificates(cer);
         }
         fetchData();
     }, []);
@@ -65,7 +67,7 @@ const AboutPage = () => {
                             <p>Professional skills validated</p>
                         </div>
                         <div className="right-block">
-                            <h1>0</h1>
+                            <h1>{certificates.length}</h1>
                         </div>
                     </div>
 

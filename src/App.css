@@ -511,13 +511,13 @@ p {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
 }
 
 .card-item {
-  width: calc(100% / 3 - 40px);
+  width: calc(100% / 4 - 40px);
+  height: 400px;
   background: linear-gradient(to top, #140e32 50%, #0006384f 50%);
   background-size: 100% 200%;
   background-position: top;
@@ -525,6 +525,33 @@ p {
   box-shadow: 0px 0px 2px lightblue;
   padding: 12px 24px;
   box-sizing: border-box;
+}
+
+.card-item-cer {
+  position: relative;
+  width: calc(100% / 4 - 40px);
+  height: 400px;
+  background: linear-gradient(to top, #140e32 50%, #0006384f 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  border-radius: 12px;
+  box-shadow: 0px 0px 2px lightblue;
+  padding: 12px 24px;
+  box-sizing: border-box;
+}
+
+.card-item-cer img {
+  width: 100%;
+  border-radius: 4px;
+  height: 194px;
+}
+
+.card-item-cer p {
+  text-align: left;
+}
+
+.card-item-cer a:hover {
+  cursor: pointer;
 }
 
 .tech-item {
@@ -572,6 +599,11 @@ p {
   justify-content: space-around;
   align-items: center;
   margin: 10px 0px;
+}
+
+.card-item-links-cer {
+  position: absolute;
+  bottom: 10px;
 }
 
 .card-item-links a {

@@ -42,3 +42,15 @@ export async function getComments() {
     if (error) throw error;
     return data;
 }
+export async function getCertificate() {
+    const { data, error } = await supabase.from("certificates").select("*");
+    if (error) throw error;
+    return data.map((t) => ({
+        id: t.id,
+        img: t.img,
+        link: t.link,
+        title: t.title,
+        date: t.date,
+        core: t.core
+    }));
+}

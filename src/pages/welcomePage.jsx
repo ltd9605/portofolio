@@ -18,7 +18,7 @@ const WelcomePage = () => {
                 </h1>
 
                 <div className="link" data-anim="zoom-in">
-                    <span className="typing-text">www.ltd.com</span>
+                    <span className="typing-text">https://s1lvester.netlify.app</span>
                 </div>
             </div>
         </div>
